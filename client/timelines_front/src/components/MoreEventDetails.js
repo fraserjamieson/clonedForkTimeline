@@ -1,5 +1,5 @@
 
-const EventDetails = ({eventDetails, events}) => {
+const MoreEventDetails = ({eventDetails, events}) => {
 
     const handleEventPersons = eventDetails.persons.map((currentPerson, index) => {
         return ( <li>{currentPerson.name}</li> 
@@ -12,9 +12,7 @@ const EventDetails = ({eventDetails, events}) => {
             <p>{eventDetails.description}</p>
                 <h3>Participants</h3>
                     <ul>
-                
                     {handleEventPersons}
-                    
                     </ul>
          </div>
     )
@@ -22,4 +20,4 @@ const EventDetails = ({eventDetails, events}) => {
 
 }
 
-export default EventDetails;
+export default MoreEventDetails;

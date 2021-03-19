@@ -15,7 +15,11 @@ const FilterSearch = ({onUserInput}) => {
                 <Input type="text" 
                 placeholder="Search event" 
                 onChange={handleFilterInput}/>
-                {/* <h6>{filteredEvents}</h6> */}
+                {/* <Grid container columns={1} >
+                    <Grid.Column>
+                        <EventList filteredEvents = {eventFilter} deleteEntry={deleteEventEntry}/> 
+                    </Grid.Column>
+                </Grid>  */}
             </Segment>
         </> 
 

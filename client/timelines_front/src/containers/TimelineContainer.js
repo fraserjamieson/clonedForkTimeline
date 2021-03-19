@@ -123,12 +123,12 @@ useEffect(()=>{
 
 return (
     <>
-    <Router>
-      <NavBar/>
-        <Switch>
-          <Route path="/timeline" exact render={()=> <TimelinePage events={events}/>}/>
-        </Switch>
-    </Router>
+        <Router>
+        <NavBar/>
+            <Switch>
+            <Route path="/timeline" exact render={()=> <TimelinePage events={events}/>}/>
+            </Switch>
+        </Router>
 
         <div id="mainComponentCont">
             <Container style={{ padding: '3rem 0rem' }}>
@@ -143,54 +143,31 @@ return (
                             
                         <Grid.Row columns={3}>
                             <Grid.Column>
-                                    {/* <Segment.Group horizontal raised> */}
-                                    {/* <div className="ui padded segment"> */}
-                                        {/* <Segment raised textAlign='left' floated='left'> */}
-                                            <Header as='h3'>New Location</Header>
-                                            <LocationForm locations={locations} locationDetails={addLocationDetails} setLocations={setLocations}/>
-                                        {/* </Segment> */}
-                                    {/* </div> */}
+                                <Header as='h3'>New Location</Header>
+                                <LocationForm locations={locations} locationDetails={addLocationDetails} setLocations={setLocations}/>
                             </Grid.Column>
                             <Grid.Column>
-                                {/* <div className="ui padded segment"> */}
-                                    {/* <Segment raised textAlign='left' floated='left'> */}
-                                    
-                                        <Header as='h3'>New Event</Header>
-                                        <EventForm locations={locations} events={events} eventDetails={addEventDetails} setEvents={setEvents}/>
-                                    {/* </Segment> */}
-                                {/* </div> */}
+                                <Header as='h3'>New Event</Header>
+                                <EventForm locations={locations} events={events} eventDetails={addEventDetails} setEvents={setEvents}/>
                             </Grid.Column>
                             <Grid.Column>
-                                {/* <div className="ui padded segment"> */}
-                                    {/* <Segment raised textAlign='left' floated='left' padded> */}
-                                        <Header as='h3'>New Participant</Header>
-                                        <PersonForm persons={persons} events={events} personDetails={addPersonDetails} />
-                                    {/* </Segment> */}
-                                {/* </div> */}
+                                <Header as='h3'>New Participant</Header>
+                                <PersonForm persons={persons} events={events} personDetails={addPersonDetails} />
                             </Grid.Column>
                         </Grid.Row>
-                            {/* </Segment.Group> */}
                         </Grid>
                     </Segment>
                 </Segment.Group>
                 </Container>
-            {/* </Segment> */}
             </Container>
-                    {/* <Segment.Group> */}
             <Container>
-                                <Segment>
-                                    <MapComponent viewEventDetails={viewEventDetails} events={events} locations={locations} persons={persons} eventDetails={eventDetails} newEvent={addEventDetails}/>
-                                </Segment>
+                <Segment>
+                    <MapComponent viewEventDetails={viewEventDetails} events={events} locations={locations} persons={persons} eventDetails={eventDetails} newEvent={addEventDetails}/>
+                </Segment>
             </Container>
-                    {/* </Segment.Group> */}
-
-                        {/* </Grid.Column> */}
-
         </div>
     </>
-
     )
-
 }
 
 export default TimelineContainer;

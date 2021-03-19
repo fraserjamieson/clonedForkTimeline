@@ -1,6 +1,6 @@
 
 import { List, Button, Grid, Segment } from 'semantic-ui-react'
-const Event = ({filteredEvent, deleteEntry}) => {
+const FilteredEvent = ({filteredEvent, deleteEntry}) => {
 
     const deleteButton = () => {
         deleteEntry(filteredEvent.id)
@@ -8,9 +8,6 @@ const Event = ({filteredEvent, deleteEntry}) => {
 
     return (
         <div>
-        
-        {/* <Grid.Column> */}
-        {/* <Grid container columns={2}> */}
             <Segment>
                 <List.Content>
                     <List.Icon name='chess knight' />
@@ -24,16 +21,7 @@ const Event = ({filteredEvent, deleteEntry}) => {
 
                 </List.Content>
             </Segment>
-        {/* </Grid> */}
-
-        {/* </Grid.Column> */}
-        
         </div>
-        
-    
     )
-
-
-
 }
-export default Event;
+export default FilteredEvent;

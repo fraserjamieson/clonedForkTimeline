@@ -43,20 +43,15 @@ const EventContainer = () => {
     
 return (
     <>
-    
-        <br/>
-        <Container >
-            <Header as='h2' content='Events' textAlign='left'/>
-            <FilterSearch onUserInput={handleUserFilter}/>
-                <Grid container columns={1} >
-                    <Grid.Column>
-                        {/* <Segment> */}
-                            <EventList filteredEvents = {eventFilter} deleteEntry={deleteEventEntry}/> 
-                        {/* </Segment> */}
-                    </Grid.Column>
-                </Grid> 
-        </Container>
-    
+
+    <Header as='h2' content='Events' textAlign='left'/>
+    <FilterSearch onUserInput={handleUserFilter}/>
+        <Grid container columns={1} >
+            <Grid.Column>
+                    <EventList filteredEvents = {eventFilter} deleteEntry={deleteEventEntry}/> 
+            </Grid.Column>
+        </Grid> 
+        
     </>
 )
 

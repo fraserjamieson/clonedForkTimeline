@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import EventDetails from './EventDetails';
+import MoreEventDetails from './MoreEventDetails';
 import Event from "./Event";
 import "../containers/TimeLineContainer.css";
 import L from 'leaflet';
@@ -38,7 +38,7 @@ const MapComponent = ({events, locations, persons, viewEventDetails, eventDetail
                 return (
 
                 <Segment>
-                    <EventDetails eventDetails={eventDetails} events={events}/>
+                    <MoreEventDetails eventDetails={eventDetails} events={events}/>
                 </Segment>
                 
                 )
